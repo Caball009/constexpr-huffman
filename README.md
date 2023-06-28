@@ -11,6 +11,8 @@ Standard vector and sorting are usable at compile-time in C++20, and compared to
 If there are other constexpr Huffman libraries publicly available, they either do not meet my needs, or take too long to compile or I'm simply unaware of them.
 
 # How to use
-Check out the example file or the examples below.
+Check out the example file or the Compiler Explorer example below.
 
-*examples to be posted*
+https://godbolt.org/z/5Kdj8fd3Y
+
+There are two reasons the result is different from https://en.wikipedia.org/wiki/File:Huffman_coding_visualisation.svg. The first reason is the inclusion of the null terminator, and the second reason is the incorrect switch of '\_' and 'D' characters. Since 'D' comes before '\_' it should get the lower value, so [0 0] for 'D' and [0 1] for '\_'.
